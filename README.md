@@ -3,7 +3,7 @@ JIRA Tracker
 
 JIRA issue / label tracker in JavaScript using JIRA's REST API
 
-You can access an [an online demo here](http://liouh.github.com/jira-tracker/)
+You can access an [an online demo here](http://liouh.github.com/jira-tracker/#captcha)
 
 ### Notes
 
