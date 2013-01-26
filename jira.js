@@ -6,7 +6,7 @@ $(function() {
 	var jiraIssueBaseUrl = jiraUrl + 'browse/';
 	
 	// change these timeouts (milliseconds) to suit your JIRA instance
-	var issueTimeout = 5000;
+	var issueTimeout = 1000;
 	var labelTimeout = 5000;
 	
 	var jiraCache, jiraProcessed, jiraBuffer, count, input, pending, error;
@@ -67,7 +67,7 @@ $(function() {
 			return;
 		}
 		
-		location.hash = input;
+		location.replace('#' + input);
 		
 		reset();
 		$('.count').text('searching...');
