@@ -1,0 +1,241 @@
+* {
+	font-family: Sans-serif;
+	font-size: 15px;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	margin: 0;
+	background-color: #ddd;
+}
+
+a {
+	color: #39c;
+}
+
+.container {
+	margin: 0 auto 50px;
+	width: 800px;
+	padding: 50px 0 50px 30px;
+	background-color: white;
+	box-shadow: 0 1px 7px #666;
+}
+
+.lookup {
+	float: left;
+	width: 400px;
+}
+
+.lookup .title {
+	font-size: 13px;
+	color: #999;
+}
+
+.lookup input[type=text] {
+	font-size: 25px;
+	font-weight: bold;
+	color: #333;
+	padding: 5px;
+	width: 300px;
+}
+
+.filters {
+	float: right;
+	width: 400px;
+	padding-top: 30px;
+}
+
+.filter {
+	text-align: right;
+	margin-right: -4px;
+	padding-bottom: 5px;
+	font-weight: bold;
+	color: #999;
+}
+
+.filter .filterSlider {
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 12px;
+	width: 65px;
+	height: 22px;
+	margin-right: 10px;
+	font-weight: bold;
+	color: #333;
+	position: relative;
+	background-color: #fafafa;
+	box-shadow: inset 0 2px 5px #ccc;
+}
+
+.filter .filterSlider.on:before {
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 3px;
+	font-size: 14px;
+	content: 'ON';
+}
+
+.filter .filterSlider.on:after {
+	display: block;
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	content: '';
+	width: 16px;
+	height: 16px;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	background-color: #ddd;
+	box-shadow: inset 0 1px 2px white;
+}
+
+.filter .filterSlider.off:before {
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 3px;
+	font-size: 14px;
+	content: 'OFF';
+}
+
+.filter .filterSlider.off:after {
+	display: block;
+	position: absolute;
+	left: 2px;
+	top: 2px;
+	content: '';
+	width: 16px;
+	height: 16px;
+	border-radius: 10px;
+	border: 1px solid #bbb;
+	background-color: #ddd;
+	box-shadow: inset 0 1px 2px white;
+}
+
+.count {
+	clear: both;
+	padding-top: 3px;
+	font-size: 13px;
+	color: #999;
+}
+
+.issues {
+	padding-top: 25px;
+}
+
+.group {
+	clear: both;
+	margin-bottom: 30px;
+	padding-top: 10px;
+	height: 15px;
+	border-bottom: 1px solid #ccc;
+}
+
+.group span {
+	background-color: white;
+	font-size: 25px;
+	font-weight: bold;
+	padding-right: 10px;
+}
+
+.issue {
+	clear: both;
+	display: block;
+	margin-left: 15px;
+	margin-bottom: 7px;
+	padding: 10px 0 10px 15px;
+}
+
+.issue:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.issue:hover {
+	background-color: #f1f1f1;
+	margin-left: 10px;
+	border-left: 5px solid #ddd;
+	box-shadow: 0 1px 1px #ccc;
+}
+
+.issue:hover .issueKey {
+	text-decoration: underline;
+}
+
+.issue.selected {
+	background-color: #fc0;
+	margin-left: 10px;
+	border-left: 5px solid #f07d00;
+	box-shadow: 0 1px 1px #999;
+}
+
+.issueKey {
+	float: left;
+	width: 120px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.issueDetails {
+	font-size: 15px;
+	float: left;
+	width: 500px;
+	color: #999;
+}
+
+.issueSummary {
+	padding-bottom: 2px;
+	font-weight: bold;
+	color: #666;
+}
+
+.issueStatus {
+	width: 140px;
+	float: right;
+	text-align: right;
+	padding-top: 3px;
+	margin-right: -4px;
+}
+
+.status {
+	padding: 8px;
+	font-weight: bold;
+	color: white;
+	background-color: #666;
+	border-radius: 7px 0 0 7px;
+	font-size: 12px;
+	box-shadow: 0 1px 1px #666;
+}
+
+.status.error {
+	background-color: #cf3c28;
+}
+
+.status.Open {
+	background-color: #f18304;
+}
+
+.status.Development {
+	background-color: #1e6caf;
+}
+
+.status.Test {
+	background-color: #2e3ba6;
+}
+
+.status.Staging {
+	background-color: #881bd0;
+}
+
+.status.Closed {
+	background-color: #92af26;
+}
