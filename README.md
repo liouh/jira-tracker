@@ -1,7 +1,7 @@
 JIRA Tracker
 ============
 
-JIRA issue / label tracker in JavaScript using JIRA's REST API
+JIRA issue / label tracker in JavaScript using JIRA's REST API over JSONP
 
 You can access an [an online demo here](http://liouh.github.com/jira-tracker/#captcha)
 
