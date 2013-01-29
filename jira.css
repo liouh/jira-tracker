@@ -56,6 +56,11 @@ a {
 	color: #999;
 }
 
+.filter .status {
+	padding: 8px 10px 5px;
+	display: inline-block;
+}
+
 .filter .filterSlider {
 	cursor: pointer;
 	display: inline-block;
@@ -63,7 +68,7 @@ a {
 	border-radius: 12px;
 	width: 65px;
 	height: 22px;
-	margin-right: 10px;
+	margin-left: 10px;
 	font-weight: bold;
 	color: #333;
 	position: relative;
