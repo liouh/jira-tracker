@@ -42,6 +42,18 @@ a {
 	width: 300px;
 }
 
+.lookup .refresh {
+	font-weight: bold;
+	font-size: 30px;
+	color: #ccc;
+	margin-left: 10px;
+}
+
+.lookup .refresh:hover {
+	cursor: pointer;
+	color: #999;
+}
+
 .filters {
 	float: right;
 	width: 400px;
