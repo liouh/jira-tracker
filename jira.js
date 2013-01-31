@@ -17,6 +17,7 @@ $(function() {
 		reset();
 		$('#input').focus();
 		$('#form').on('submit', submitIssue);
+		$('.refresh').on('click', submitIssue);
 		$('#filter-closed').on('click', toggleFilter);
 		
 		if(location.hash) {
