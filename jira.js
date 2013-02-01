@@ -9,8 +9,16 @@ $(function() {
 	var issueTimeout = 1000;
 	var labelTimeout = 5000;
 	
+	/* ============================== *\
+	 * Private fields
+	\* ============================== */
+	
 	var jiraCache, jiraProcessed, jiraBuffer, count, input, pending, error;
 	var projectCache = {};
+	
+	/* ============================== *\
+	 * Init and reset
+	\* ============================== */
 	
 	function init() {
 	
@@ -37,6 +45,10 @@ $(function() {
 		error = false;
 	}
 	
+	/* ============================== *\
+	 * Status filters
+	\* ============================== */
+	
 	function toggleFilter(e) {
 		var target = $(e.currentTarget);
 		if(target.hasClass('on')) {
@@ -57,6 +69,10 @@ $(function() {
 		}
 	}
 	
+	/* ============================== *\
+	 * Submit input
+	\* ============================== */
+	
 	function submitIssue(e) {
 	
 		if(e) {
@@ -75,6 +91,10 @@ $(function() {
 		$('.issues').empty();
 		lookupIssue(input, true);
 	}
+	
+	/* ============================== *\
+	 * Lookup by issue from JIRA
+	\* ============================== */
 	
 	function lookupIssue(issue, first) {
 		
@@ -112,6 +132,10 @@ $(function() {
 		});
 	}
 	
+	/* ============================== *\
+	 * Lookup by label from JIRA
+	\* ============================== */
+	
 	function lookupLabel(label) {
 	
 		$.ajax({
@@ -136,6 +160,10 @@ $(function() {
 			}
 		});
 	}
+	
+	/* ============================== *\
+	 * Process issue data
+	\* ============================== */
 	
 	function processIssue(issue) {
 		
@@ -165,6 +193,10 @@ $(function() {
 			}
 		}
 	}
+	
+	/* ============================== *\
+	 * Format issue data
+	\* ============================== */
 	
 	function formatIssue(issue) {
 		
@@ -224,6 +256,10 @@ $(function() {
 		jiraBuffer.push({key: issue, html: html});
 	}
 	
+	/* ============================== *\
+	 * Render after all data fetched
+	\* ============================== */
+	
 	function checkFinish() {
 		
 		if(pending) {
@@ -252,6 +288,10 @@ $(function() {
 		
 		processFilters();
 	}
+	
+	/* ============================== *\
+	 * Lookup project name from JIRA
+	\* ============================== */
 	
 	function displayProjectName(name) {
 	
