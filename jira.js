@@ -13,7 +13,7 @@ $(function() {
 	 * Private fields
 	\* ============================== */
 	
-	var jiraCache, jiraProcessed, jiraBuffer, count, input, pending, error;
+	var jiraCache, jiraProcessed, jiraBuffer, count, input, pending, error, labelLookup;
 	var projectCache = {};
 	
 	/* ============================== *\
@@ -43,6 +43,7 @@ $(function() {
 		jiraProcessed = {};
 		jiraBuffer = [];
 		error = false;
+		labelLookup = false;
 	}
 	
 	/* ============================== *\
@@ -145,6 +146,8 @@ $(function() {
 			jsonp: 'jsonp-callback',
 			timeout: labelTimeout,
 			success: function(data) {
+				labelLookup = true;
+				
 				for(var i in data.issues) {
 					lookupIssue(data.issues[i].key);
 				}
@@ -174,7 +177,7 @@ $(function() {
 		if(issueData != 'error') {
 		
 			// get parent
-			if(issueData.fields.parent) {
+			if(issueData.fields.parent && !labelLookup) {
 				lookupIssue(issueData.fields.parent.key);
 			}
 			
