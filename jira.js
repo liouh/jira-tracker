@@ -141,7 +141,7 @@ $(function() {
 	
 		$.ajax({
 			type: 'GET',
-			url: jiraApiBaseUrl + 'search?jql=labels=' + encodeURIComponent(label),
+			url: jiraApiBaseUrl + 'search?jql=labels="' + encodeURIComponent(label) + '"',
 			dataType: 'jsonp',
 			jsonp: 'jsonp-callback',
 			timeout: labelTimeout,
