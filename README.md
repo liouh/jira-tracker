@@ -3,8 +3,6 @@ JIRA Tracker
 
 JIRA issue / label tracker in JavaScript using JIRA's REST API over JSONP
 
-You can access an [~~an online demo here~~](http://liouh.github.com/jira-tracker/#captcha)
-
 **Update:** JIRA has disabled their JSONP API for OnDemand instances ([thread here](https://answers.atlassian.com/questions/138618/jira-rest-api-response-suddenly-stopped-sending-jsonp-getting-invalid-label-syntax-error)).
 <br/>
 You can still use the code with your own JIRA installs, but the demo using atlassian.com will no longer work.
